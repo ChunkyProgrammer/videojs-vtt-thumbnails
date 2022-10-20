@@ -1,8 +1,8 @@
-# videojs-vtt-thumbnails-freetube
+# videojs-vtt-thumbnails
 
 Video.js plugin that displays thumbnails on progress bar hover, driven by external VTT files.  Based on [this JW Player spec](https://support.jwplayer.com/customer/portal/articles/1407439-adding-preview-thumbnails). Note, this plugin currently only supports sprited thumbnails.
 
-Forked from https://github.com/chrisboustead/videojs-vtt-thumbnails.git in order to be maintained for the FreeTube project (https://github.com/FreeTubeApp/FreeTube-Vue).
+Forked from https://github.com/chrisboustead/videojs-vtt-thumbnails.git in order to be maintained for the FreeTube project (https://github.com/FreeTubeApp/FreeTube).
 
 Note: Plugin hides the default skin's mouse display timestamp on hover.
 
@@ -26,7 +26,7 @@ Note: Plugin hides the default skin's mouse display timestamp on hover.
 ## Installation
 
 ```sh
-npm install --save videojs-vtt-thumbnails
+npm install --save @freetube/videojs-vtt-thumbnails
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ var videojs = require('video.js');
 // The actual plugin function is exported by this module, but it is also
 // attached to the `Player.prototype`; so, there is no need to assign it
 // to a variable.
-require('videojs-vtt-thumbnails');
+require('@freetube/videojs-vtt-thumbnails');
 
 var player = videojs('my-video');
 
@@ -70,7 +70,7 @@ player.vttThumbnails();
 When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
 
 ```js
-require(['video.js', 'videojs-vtt-thumbnails'], function(videojs) {
+require(['video.js', '@freetube/videojs-vtt-thumbnails'], function(videojs) {
   var player = videojs('my-video');
 
   player.vttThumbnails();
